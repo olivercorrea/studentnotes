@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ingreso de Notas de los estudiantes</title>
+    <!-- <link href="../public/styles.css" rel="stylesheet"> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 flex justify-center items-center h-screen">
+    <div class="w-full max-w-xs">
+      <form
+        class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+        action="/api/notes"
+        method="POST"
+      >
+        <div class="mb-4">
+          <label
+            class="block text-gray-700 text-sm font-bold mb-2"
+            for="nombreTarea"
+          >
+            Nombre del la Tarea
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="nombreTarea"
+            type="text"
+            name="nombreTarea"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label
+            class="block text-gray-700 text-sm font-bold mb-2"
+            for="fechaCalificacion"
+          >
+            Fecha de calificación
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="fechaCalificacion"
+            type="date"
+            name="fechaCalificacion"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label
+            class="block text-gray-700 text-sm font-bold mb-2"
+            for="estudiante"
+          >
+            Nombre del estudiante
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="estudiante"
+            type="text"
+            name="estudiante"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label
+            class="block text-gray-700 text-sm font-bold mb-2"
+            for="descripcion"
+          >
+            Descripción
+          </label>
+          <textarea
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="descripcion"
+            name="descripcion"
+            required
+          ></textarea>
+        </div>
+        <div class="mb-4">
+          <label
+            class="block text-gray-700 text-sm font-bold mb-2"
+            for="calificacion"
+          >
+            Calificación
+          </label>
+          <select
+            class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="calificacion"
+            name="calificacion"
+            required
+          >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+          </select>
+        </div>
+        <div class="mb-4">
+          <label
+            class="block text-gray-700 text-sm font-bold mb-2"
+            for="imagenUrl"
+          >
+            URL de la imagen del estudiante
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="imagenUrl"
+            type="text"
+            name="imagenUrl"
+            required
+          />
+        </div>
+        <div class="flex items-center justify-between">
+          <button
+            class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+          >
+            Ingresar
+          </button>
+          <a
+            class="inline-block align-baseline font-bold text-sm text-green-500 hover:text-green-800"
+            href="/lista"
+          >
+            Ver Lista
+          </a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
